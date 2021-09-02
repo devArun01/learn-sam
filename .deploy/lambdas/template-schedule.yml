@@ -1,0 +1,18 @@
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  ScheduledApp:
+    Type: AWS::Serverless::Function
+    CodeUri: main.go
+    Properties:
+      CodeUri: ../../hello/
+      Handler: hello
+      Runtime: go1.x
+      Tracing: Active
+      Events: 
+        HelloWorldLambdaSchedulerRule:
+          Type: Schedule
+          Properties: 
+            Description: Hello World runs every 1 minute
+            Enabled: true
+            Name: HelloWorldLambdaSchedulerRule
+            Schedule: rate(1 minute)
