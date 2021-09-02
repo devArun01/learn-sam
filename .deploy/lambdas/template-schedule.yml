@@ -9,10 +9,10 @@ Resources:
       Runtime: go1.x
       Tracing: Active
       Events: 
-        HelloWorldLambdaSchedulerRule:
+        HelloWorldLambdaSchedulerGoRule:
           Type: Schedule
           Properties: 
             Description: Hello World runs every 1 minute
             Enabled: true
-            Name: HelloWorldLambdaSchedulerRule
+            Name: HelloWorldLambdaSchedulerGoRule
             Schedule: rate(1 minute)
