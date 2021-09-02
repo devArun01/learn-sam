@@ -1,0 +1,9 @@
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  App:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: hello/
+      Handler: hello
+      Runtime: go1.x
+      Tracing: Active
